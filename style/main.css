@@ -109,8 +109,8 @@ body {
 }
 
 .social-icon-img {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -130,9 +130,9 @@ body {
 
 /* CORRECCIÓN: Foto de perfil completamente redonda */
 .hero-avatar img {
-    max-width: 240px;
-    width: 240px;
-    height: 240px;
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%; /* Obliga a la imagen a ser circular */
     object-fit: cover; /* Evita que la foto se distorsione o aplaste */
     margin-top: 20px;
