@@ -10,13 +10,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     background-color: #ffffff;
+    -webkit-font-smoothing: antialiased; /* Suaviza los bordes de las letras en Mac/iOS */
+    -moz-osx-font-smoothing: grayscale; /* Suaviza las letras en Firefox */
 }
 
 .container {
@@ -38,7 +41,7 @@ body {
 .btn-outline {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    padding: 10px 24px;
+    padding: 6px 18px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -48,6 +51,11 @@ body {
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: #ffffff;
+}
+
+.btn-outline:hover .icon {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
 }
 
 /* --- NAVBAR --- */
@@ -63,7 +71,7 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     font-weight: 800;
     color: var(--primary-color);
 }
@@ -101,8 +109,8 @@ body {
 }
 
 .social-icon-img {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
 }
 
 
@@ -122,9 +130,9 @@ body {
 
 /* CORRECCIÓN: Foto de perfil completamente redonda */
 .hero-avatar img {
-    max-width: 200px;
-    width: 200px;
-    height: 200px;
+    max-width: 240px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%; /* Obliga a la imagen a ser circular */
     object-fit: cover; /* Evita que la foto se distorsione o aplaste */
     margin-top: 20px;
