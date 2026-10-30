@@ -1,0 +1,472 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+:root {
+    --primary-color: #6E0BFF; /* El morado característico de Matt */
+    --text-dark: #141c3a;
+    --text-light: #5f6f81;
+    --bg-light: #fbfbfb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.container-narrow {
+    max-width: 800px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- BOTONES Y ENLACES --- */
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* --- NAVBAR --- */
+.main-header {
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+/* CORRECCIÓN: Alineación perfecta de elementos del header */
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espacio uniforme entre el SVG y el texto número */
+}
+
+.btn-whatsapp .icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* HOVER: Animación fluida de redes del Header */
+.header-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.header-social-link:hover {
+    transform: scale(1.15);
+}
+
+.social-icon-img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* --- HERO --- */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2px;
+}
+
+.hero h2 {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* CORRECCIÓN: Foto de perfil completamente redonda */
+.hero-avatar img {
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Obliga a la imagen a ser circular */
+    object-fit: cover; /* Evita que la foto se distorsione o aplaste */
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* --- ABOUT (Sección Morada) --- */
+.about {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding-bottom: 80px; /* Espacio inferior para que las tarjetas de skills floten encima */
+}
+
+.about h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- SKILLS CARDS (Efecto flotante y Responsivo) --- */
+.skills {
+    margin-top: -130px; /* Sube la sección para encimarse sobre la sección morada */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Por defecto en móvil: una sola columna */
+    gap: 30px;
+}
+
+.skill-card {
+    background: #ffffff;
+    border: 1px solid #e6ecf8;
+    border-radius: 12px;
+    padding: 50px 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.skill-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.skill-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.tech-title {
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* --- PORTFOLIO PROYECTOS --- */
+.portfolio h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #333; /* Color de fondo temporal */
+    height: 250px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Efecto hover en los proyectos */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 28, 58, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #ffffff;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h5 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-overlay p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-project {
+    border: 2px solid var(--primary-color);
+    color: #ffffff;
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* --- NUEVOS ESTILOS: SECCIÓN DE COMPAÑÍAS --- */
+.companies-section {
+    border-top: 1px solid #e6ecf8;
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.companies-section h3 {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-logo-placeholder {
+    font-weight: 700;
+    color: var(--text-light);
+    opacity: 0.4;
+    font-size: 1.2rem;
+    padding: 20px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+}
+
+/* --- NUEVOS ESTILOS: SECCIÓN STARTUPS --- */
+.startups-section {
+    border-top: 1px solid #e6ecf8;
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.startups-section h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.startups-subtitle {
+    color: var(--text-light);
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+}
+
+.startups-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.startup-card {
+    background: #ffffff;
+    border: 1px solid #e6ecf8;
+    border-radius: 16px;
+    padding: 40px 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.startup-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.startup-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.startup-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.startup-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.startup-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border 0.2s;
+}
+
+.startup-link:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* --- FOOTER Y CTA --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding-top: 30px;
+    position: relative;
+    margin-top: 150px;
+}
+
+.cta-box {
+    background-color: #141c3a;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    top: -100px;
+    left: 5%;
+    right: 5%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.cta-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.cta-box p {
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.btn-outline-white {
+    border: 2px solid var(--primary-color);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-outline-white:hover {
+    background-color: var(--primary-color);
+}
+
+/* NUEVO: Contenedor e iconos centrales del Footer */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 40px 0 20px 0;
+}
+
+.footer-icon-link {
+    display: inline-flex;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.7;
+}
+
+.footer-icon-link:hover {
+    transform: translateY(-4px); /* Sutil brinco hacia arriba en hover */
+    opacity: 1; /* Ilumina por completo el icono blanco */
+}
+
+.footer-icon-img {
+    width: 28px;
+    height: 28px;
+}
+
+.footer-credits {
+    margin-top: 80px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES (Aquí ocurre la magia para Tablets y Computadoras)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    /* El texto del Hero crece en pantallas más grandes */
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Las cajas de habilidades se dividen en 2 columnas (Frontend y Backend) */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Los proyectos se dividen en 3 columnas */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .companies-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .startups-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 50px;
+    }
+
+    .cta-box p {
+        margin-bottom: 0;
+    }
+}
