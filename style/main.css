@@ -113,10 +113,14 @@ body {
     height: 40px;
 }
 
+.skill-icon-img {
+    width: 120px;
+    height: 120px;
+}
 
 /* --- HERO --- */
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 2px;
 }
 
@@ -272,13 +276,13 @@ body {
 .companies-section h3 {
     font-size: 1.6rem;
     color: var(--text-dark);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .companies-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 2px;
     align-items: center;
     justify-content: center;
 }
@@ -286,11 +290,20 @@ body {
 .company-logo-placeholder {
     font-weight: 700;
     color: var(--text-light);
-    opacity: 0.4;
+    opacity: 0.8;
     font-size: 1.2rem;
-    padding: 20px;
-    border: 1px dashed #cbd5e1;
+    padding: 4px;
+   /* border: 1px dashed #cbd5e1;*/
     border-radius: 8px;
+}
+
+.company-logo-img-1 {
+    width: 240px;
+    height: 170px;
+}
+.company-logo-img-2 {
+    width: 240px;
+    height: 120px;
 }
 
 /* --- NUEVOS ESTILOS: SECCIÓN STARTUPS --- */
@@ -413,7 +426,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    margin: 40px 0 20px 0;
+    margin: 100px 0 20px 0;
 }
 
 .footer-icon-link {
@@ -428,12 +441,12 @@ body {
 }
 
 .footer-icon-img {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
 }
 
 .footer-credits {
-    margin-top: 80px;
+    margin-top: 30px;
     opacity: 0.7;
     font-size: 0.9rem;
 }
@@ -460,7 +473,7 @@ body {
     }
 
     .companies-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .startups-grid {
         grid-template-columns: repeat(3, 1fr);
