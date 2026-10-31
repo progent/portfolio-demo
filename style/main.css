@@ -312,6 +312,74 @@ body {
     height: 120px;
 }
 
+/* --- FONDO MORADO --- */
+.services-purple-bg {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 140px; /* Deja suficiente espacio abajo en el fondo morado */
+}
+
+.services-purple-bg h3 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.text-white-opacity {
+    color: #ffffff;
+    opacity: 0.9;
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* --- CONTENEDOR DE TARJETAS FORZADO HACIA ARRIBA --- */
+.services-cards-float {
+    position: relative;
+    z-index: 99;         /* Fuerza a este bloque a estar en la capa superior */
+    margin-top: -100px;  /* Sube las tarjetas para meterlas dentro del morado */
+}
+
+/* Reseteo del padding interno del contenedor para evitar espacios blancos fantasmas */
+.container-cards-grid {
+    padding-top: 0 !important;
+    padding-bottom: 60px;
+}
+
+/* Estilo de las tarjetas (asegura fondo blanco sólido para tapar el morado al subir) */
+.startup-card {
+    background: #ffffff;
+    border: 1px solid #e6ecf8;
+    border-radius: 12px;
+    padding: 50px 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.startup-icon-wrapper {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* CORREGIDO: Fuerza el centrado perfecto de las imágenes de tus iconos */
+.service-icon-img {
+    display: block;
+    margin: 0 auto 25px auto; /* Centra horizontalmente y da separación abajo */
+    width: 120px;
+    height: 120px;
+}
+
+/* CORREGIDO: Convierte los títulos de estas tarjetas a color morado igual que al inicio */
+.service-card-title {
+    color: var(--primary-color) !important; /* Pinta el título con tu morado #6E0BFF */
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 /* --- NUEVOS ESTILOS: SECCIÓN STARTUPS --- */
 .startups-section {
     border-top: 1px solid #e6ecf8;
@@ -342,7 +410,7 @@ body {
     background: #ffffff;
     border: 1px solid #e6ecf8;
     border-radius: 16px;
-    padding: 40px 24px;
+    padding: 50px 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -378,6 +446,13 @@ body {
 
 .startup-link:hover {
     border-bottom: 1px solid var(--primary-color);
+}
+
+/* Fuerza el centrado de todos los textos y párrafos dentro de las tarjetas de servicios */
+.startup-card p {
+    text-align: center !important;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 /* --- FOOTER Y CTA --- */
