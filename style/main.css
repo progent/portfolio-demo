@@ -276,25 +276,31 @@ body {
 .companies-section h3 {
     font-size: 1.6rem;
     color: var(--text-dark);
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .companies-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
     align-items: center;
     justify-content: center;
 }
 
 .company-logo-placeholder {
-    font-weight: 700;
-    color: var(--text-light);
-    opacity: 0.8;
-    font-size: 1.2rem;
-    padding: 4px;
-   /* border: 1px dashed #cbd5e1;*/
-    border-radius: 8px;
+    max-width: 140px;      /* Ancho máximo para que no se vean gigantes */
+    height: 45px;          /* Altura fija para mantener la simetría de la fila */
+    width: 100%;
+    object-fit: contain;   /* Truco clave: escala el logo sin deformarlo ni aplastarlo */
+    filter: grayscale(100%); /* Convierte los logos a blanco y negro (estilo corporativo) */
+    opacity: 0.4;          /* Sutil y elegante */
+    transition: all 0.3s ease;
+}
+
+.company-logo-placeholder:hover {
+    filter: grayscale(0%);
+    opacity: 0.9;
+    transform: scale(1.05); /* Pequeño empuje visual */
 }
 
 .company-logo-img-1 {
@@ -427,7 +433,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    margin: 150px 0 20px 0;
+    margin: 200px 0 20px 0;
 }
 
 .footer-icon-link {
@@ -474,7 +480,11 @@ body {
     }
 
     .companies-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        max-width: 1000px;
+        margin: 0 auto;
+        align-items: center;
     }
     .startups-grid {
         grid-template-columns: repeat(3, 1fr);
