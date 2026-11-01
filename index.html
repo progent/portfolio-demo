@@ -14,7 +14,21 @@
 <!-- NAV / HEADER -->
 <header class="main-header">
     <div class="container navbar">
-        <div class="logo">JH</div>
+            <div class="menu-hamburguesa">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- Aquí puedes meter los enlaces que saldrán al abrir el menú si lo deseas -->
+                <ul class="menu-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#servicios">Services</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                </ul>
+            </div>
         <div class="header-contacts">
             <!-- Iconos agregados adelante de forma alineada -->
            <!-- <a href="https://github.com" target="_blank" class="header-social-link" aria-label="GitHub">
@@ -48,7 +62,7 @@
 </section>
 
 <!-- SOBRE MÍ (Sección flotante/superpuesta como la de Matt) -->
-<section class="about text-center">
+<section  class="about text-center">
     <div class="container container-narrow">
         <h3>Hi, I'm Jesús.</h3>
         <p>I have worked on some projects — developing systems, applications, and web solutions — using a range of languages, frameworks, and technologies for both backend and frontend. I always follow best practices, ensuring that all requirements are met. Feel free to continue exploring my site.</p>
@@ -56,7 +70,7 @@
 </section>
 
 <!-- SKILLS / HABILIDADES (Cajas de especialidades en Grid) -->
-<section class="skills">
+<section id="skills" class="skills">
     <div class="container">
         <div class="skills-grid">
 
@@ -154,7 +168,7 @@
 </section>
 
 <!-- SECCIÓN DE SERVICIOS CON FONDO MORADO -->
-<section class="services-purple-bg text-center">
+<section id="servicios" class="services-purple-bg text-center">
     <div class="container">
         <h3>Services</h3>
         <p class="section-subtitle-large text-white-opacity">I build tailored digital solutions designed to optimize operations, improve user experiences, and scale business infrastructure with modern code.</p>
@@ -211,6 +225,10 @@
 
         <p class="footer-credits">Jesús Hernández &copy; 2026</p>
     </div>
+
+    <!-- BOTÓN FLOTANTE PARA VOLVER ARRIBA -->
+    <a href="#" class="btn-back-to-top" aria-label="Volver arriba">▲</a>
+
 </footer>
 
 </body>
