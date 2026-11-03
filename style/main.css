@@ -227,13 +227,16 @@ body {
 }
 
 .project-card {
-    background-color: #333; /* Color de fondo temporal */
+   /* background-color: #333; */ /* Color de fondo temporal */
+    background-color: #f6f6f6;
     height: 250px;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra difuminada muy elegante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el efecto hover */
 }
 
 /* Efecto hover en los proyectos */
@@ -252,20 +255,47 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     color: #ffffff;
+    box-shadow: 0 15px 35px rgba(110, 11, 255, 0.15); /* La sombra crece y adopta un sutil tinte morado */
 }
 
 .project-card:hover .project-overlay {
     opacity: 1;
 }
 
+.project-card:hover {
+    transform: scale(1.08);   /* Sutil zoom de fondo */
+    transform: translateY(-5px); /* Eleva la tarjeta 5 píxeles */
+    box-shadow: 0 15px 35px rgba(110, 11, 255, 0.15); /* La sombra crece y adopta un sutil tinte morado */
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.08);   /* Sutil zoom de fondo */
+}
+
 .project-overlay h5 {
     font-size: 1.4rem;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .project-overlay p {
     font-size: 0.95rem;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* TRUCO CLAVE 2: Se estira y adapta sin aplastarse ni deformarse */
+    transition: transform 0.5s ease;
+}
+
+.project-desc {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -277,6 +307,20 @@ body {
     border-radius: 20px;
     text-decoration: none;
     font-size: 0.9rem;
+}
+.btn-project:hover {
+    background-color: rgba(20, 28, 58, 0.95);
+    color: #ffffff;
+    transform: scale(1.08);   /* Sutil zoom de fondo */
+}
+
+
+.project-tech {
+    color: #5be9b9;           /* Detalle verde menta para resaltar tecnologías */
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 /* --- NUEVOS ESTILOS: SECCIÓN DE COMPAÑÍAS --- */
