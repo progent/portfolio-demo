@@ -323,6 +323,41 @@ body {
     margin-bottom: 20px;
 }
 
+/* CONTENEDOR DEL BOTÓN INFERIOR */
+.more-projects-action {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 50px;        /* Espacio libre entre la tarjeta y el botón */
+}
+
+/* ESTILO DEL BOTÓN MORADO PREMIUM */
+.btn-primary-purple {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;               /* Separa el texto del icono de GitHub */
+    background-color: var(--primary-color); /* Tu morado #6E0BFF */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 30px;     /* Bordes completamente redondeados estilo Matt Farley */
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 8px 20px rgba(110, 11, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER DEL BOTÓN */
+.btn-primary-purple:hover {
+    background-color: #141c3a;
+    color: var(--primary-color); /* Invierte los colores en Hover */
+    transform: translateY(-3px);  /* Pequeña elevación fluida */
+    box-shadow: 0 12px 25px rgba(110, 11, 255, 0.3);
+    color: #ffffff;
+}
+
+
+
 /* --- NUEVOS ESTILOS: SECCIÓN DE COMPAÑÍAS --- */
 .companies-section {
     border-top: 1px solid #e6ecf8;
